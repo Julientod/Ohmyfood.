@@ -1,0 +1,404 @@
+* {
+    font-family: 'robot', sans-serif;
+}
+
+body {
+    max-width: 768px;
+    margin: auto;
+}
+
+.loaderContainer {
+    /* Firefox */
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+
+    /* Safari and Chrome */
+    /* Opera */
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.loaderContent {
+    top: 0px;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 10;
+    -webkit-animation: cssAnimation 0s 1.3s forwards;
+    animation: cssAnimation 0s 1.3s forwards;
+    visibility: visible;
+}
+
+@-webkit-keyframes cssAnimation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes cssAnimation {
+    to {
+        visibility: hidden;
+    }
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #99e2d0;
+    margin: 0 15px;
+    -webkit-animation: loader infinite 0.3s alternate;
+    animation: loader infinite 0.3s alternate;
+}
+
+.d2 {
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+    background: #9356dc;
+}
+
+.d3 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+    background: #cc2366;
+}
+
+@-webkit-keyframes loader {
+    100% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+}
+
+@keyframes loader {
+    100% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.location {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.logo {
+    display: flex;
+    box-shadow: 0px 2px 4px 0px #00000026;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+    img {
+        height: 44px;
+        width: 162px;
+    }
+}
+
+.numero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9356DC;
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    position: absolute;
+    left: -10px;
+}
+
+.logo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20px;
+    position: absolute;
+    left: 28px;
+    top: 0;
+}
+
+.logo_purple {
+    color: #9356DC;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EAEAEA;
+    width: 100%;
+    height: 50px;
+    gap: 10px;
+
+    i {
+        color: #353535;
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F6F6F6;
+    padding-top: 0;
+}
+
+.title_text {
+    padding: 10px 38px 10px 51px;
+}
+
+button {
+    margin-bottom: 51px;
+    margin-top: 15px;
+}
+
+.title button {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    color: white;
+    width: 218px;
+    height: 50px;
+    top: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px 0px #00000040;
+    border: none;
+}
+
+.fonctionnement {
+    padding: 26px 12px 0 12px;
+}
+
+.fonctionnement_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 70px;
+}
+
+.fonctionnement .card {
+    display: flex;
+    justify-content: center;
+    height: 62px;
+    border-radius: 20px;
+    background: #F6F6F6;
+    box-shadow: 0px 4px 15px 0px #00000026;
+    width: 90%;
+    align-items: center;
+    position: relative;
+    padding: 6px;
+}
+
+.card_icon {
+    background: #7E7E7E;
+}
+
+.fa-heart {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.content__heart__empty {
+    position: relative;
+    left: 34px;
+}
+
+.content__heart__fill {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background: linear-gradient(to bottom, #9356dc, #FF79DA);
+    background-clip: text;
+    color: transparent;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.restaurants {
+    background: #F6F6F6;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    h1 {
+        padding: 10px;
+    }
+
+    a {
+        width: 95%;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.restaurants_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.restaurants .card {
+    width: 100%;
+    height: 20%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px 0px #0000001A;
+    background: #FFFFFF;
+}
+
+.image_container {
+    overflow: hidden;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 231px;
+        top: -57px;
+        left: -3px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+.nouveau {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: #99E2D0;
+    color: #008766;
+    padding: 10px;
+}
+
+.card-content {
+    margin: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer {
+    background: #353535;
+    color: white;
+    padding: 20px;
+}
+
+.footer_title {
+    padding-bottom: 10px;
+}
+
+.footer img {
+    padding: 0;
+    height: 25px;
+}
+
+.footer_icon {
+    display: flex;
+    gap: 10px;
+}
+
+@media (min-width: 1440px) {
+    body {
+        max-width: 1440px;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .location {
+        box-shadow: none;
+    }
+
+    .logo_container {
+        left: 43px;
+    }
+
+    .logo img {
+        height: 34px;
+        width: 200px;
+    }
+
+    .fonctionnement {
+        padding: 4px 136px 30px 116px;
+
+        h1 {
+            padding-top: 30px;
+        }
+    }
+
+    .restaurants h1 {
+        padding-top: 30px;
+    }
+
+    .fonctionnement_card {
+        flex-direction: row;
+    }
+
+    .fonctionnement .card {
+        justify-content: space-around;
+        height: 45px;
+    }
+
+    .restaurants {
+        padding: 0 50px 30px 50px;
+
+        a {
+            width: 44%;
+            padding: 32px 20px 0 20px;
+        }
+    }
+
+    .restaurants_card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+        padding-left: 17px;
+
+        .card {
+            width: 100%;
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        gap: 68px;
+        padding: 32px 84px 29px 10px;
+    }
+
+    .footer_content {
+        display: flex;
+
+        p {
+            margin: 0 10px;
+        }
+    }
+}
