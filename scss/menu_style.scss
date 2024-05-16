@@ -161,15 +161,22 @@ h2 {
     overflow: hidden;
 }
 
-.card_text {
-    display: flex;
-    flex-direction: row;
+.card_text,
+.card_content h4 {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .card_content {
+    display: inline-block;
     padding-bottom: 15px;
-    padding-right: 36px;
     padding-left: 1px;
+    width: 75%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 @-webkit-keyframes fadein {
