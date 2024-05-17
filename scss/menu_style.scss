@@ -83,6 +83,41 @@ h2 {
     padding-left: 10px;
 }
 
+.delay-menu {
+    -webkit-animation: menu 1.5s both ease-in-out;
+    animation: menu 1.5s both ease-in-out;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 3px;
+}
+
+.delay-menu-2 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.delay-menu-3 {
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+@-webkit-keyframes menu {
+    from {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
 .menu_header {
     display: flex;
 }
@@ -101,7 +136,7 @@ h2 {
 
 .content__heart__empty {
     position: relative;
-    left: 34px;
+    top: 44px;
 }
 
 .content__heart__fill {
@@ -113,6 +148,7 @@ h2 {
     background: linear-gradient(to bottom, #9356dc, #FF79DA);
     background-clip: text;
     color: transparent;
+    top: 44px;
 
     &:hover {
         opacity: 1;
@@ -146,6 +182,10 @@ h2 {
     flex-direction: column;
     gap: 10px;
     padding-left: 10px;
+}
+
+.card_no-anim {
+    width: 75%;
 }
 
 .menu .card {

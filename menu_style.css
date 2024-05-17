@@ -143,12 +143,13 @@ h2 {
 }
 
 .content__heart__empty {
-  position: relative;
-  left: 34px;
+  position: absolute;
+  top: 44px;
 }
 
 .content__heart__fill {
-  position: relative;
+  position: absolute;
+  top: 44px;
   height: 30px;
   width: 30px;
   opacity: 0;
@@ -207,6 +208,10 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   overflow: hidden;
+}
+
+.card_no-anim {
+  width: 75%;
 }
 
 .card_text,
@@ -346,7 +351,7 @@ h2 {
 
 
 /*media queries 1440*/
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   body {
     max-width: 2560px;
   }
