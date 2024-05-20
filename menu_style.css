@@ -102,8 +102,7 @@ h2 {
 }
 
 .logo img {
-  width: 164px;
-  height: 44px;
+  height: 31px;
 }
 
 
@@ -144,12 +143,14 @@ h2 {
 
 .content__heart__empty {
   position: absolute;
-  top: 44px;
+  top: 32px;
+  right: 28px;
 }
 
 .content__heart__fill {
   position: absolute;
-  top: 44px;
+  top: 32px;
+  right: 28px;
   height: 30px;
   width: 30px;
   opacity: 0;
@@ -176,11 +177,18 @@ h2 {
 
 .menu h1 {
   font-family: Shrikhand;
-  font-size: 40px;
+  font-size: 25px;
   font-style: italic;
   line-height: 41px;
   padding-top: 7px;
-  padding-left: 35px;
+  padding-left: 7px;
+}
+
+.menu h2 {
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: lighter;
+
 }
 
 .menu_title {
@@ -241,6 +249,10 @@ h2 {
   }
 }
 
+.check_container {
+  display: flex;
+}
+
 .check {
   background-color: #99e2d0;
   margin-right: -2.7rem;
@@ -273,27 +285,12 @@ h2 {
 }
 
 .checkLogo {
+  padding: 4px;
   border-radius: 1rem;
   background-color: white;
 }
 
 
-.prix {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-  padding-right: 20px;
-  padding-bottom: 17px;
-}
 
 
 .menu button {
@@ -350,6 +347,81 @@ h2 {
 }
 
 
+.card-dish {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  width: 95%;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 3px 3px 13px 1px rgba(0, 0, 0, 0.1);
+}
+
+.card-dish__info {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 10px 0 10px 15px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-dish__heading {
+  display: inline;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
+
+.card-dish__byline,
+.card-dish__price {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+}
+
+.card-dish__check {
+  display: flex;
+}
+
+.card-dish__price {
+  margin: 34px 0 5px 0;
+}
+
+.card-dish__checkmark {
+  background-color: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  width: 60px;
+  margin: 0 -61px 0 15px;
+  transition: margin-right 1.5s;
+}
+
+.card-dish:hover .card-dish__checkmark {
+  margin-right: 0;
+}
+
+.card-dish__byline {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  transition: width 1.5s;
+}
+
+.card-dish:hover .card-dish__byline {
+  width: 100%;
+}
+
+.card-dish__checkmark i {
+  left: 19px;
+  position: relative;
+  top: 17px;
+}
+
 /*media queries 1440*/
 @media (min-width: 768px) {
   body {
@@ -365,6 +437,24 @@ h2 {
     display: flex;
     justify-content: center;
   }
+
+  .menu h1 {
+    font-size: 30px;
+  }
+
+  .card-dish {
+    height: 72px;
+  }
+
+
+  .content__heart__empty {
+    right: 114px;
+  }
+
+  .content__heart__fill {
+    right: 114px;
+  }
+
 
   .menu button {
     width: 40%;
